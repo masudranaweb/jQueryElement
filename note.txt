@@ -1,0 +1,31 @@
+# what is js?
+Ans: Front-end, scripting language or programming language for web.
+
+# FE:
+User interface interected by user;
+
+#Scripting language is a programming language which eecutes code line by line.
+
+#Programm:
+Set of instructions executed by machine.
+
+#LiveScript:
+JavaScript-- JavaSript--ECMAScript
+
+#Java and JavaScript are not similar, java was very popular at that time.
+ Invented by Brendan Eich, first appeared in 1995.
+
+#The standards for javaScript are the E 
+
+
+
+# there two kinds of function : 1. user-define/custom function 2. pre-define/pre-build function
+
+#code commenting.........
+1. HTML code commentin 	= 	<-- -->
+2. CSS code commentin 	= 	/* */
+3. JS code commentin  	= 	//
+
+
+
+
