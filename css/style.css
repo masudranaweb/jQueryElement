@@ -19,6 +19,29 @@
 height: 300px;
 width:300px;
 }
-
-.textAnimation{
+.slideStop p{
+    cursor: pointer;
+    padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+  margin:10px 0;
+}
+.chaining{
+    color:blue;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    padding:10px 5px;
+}
+.empty_box{
+    width:600px;
+    height:300px;
+    background-color: #f2f2f2;
+    color:#000;
+    font-style:bold;
+    margin-left:300px;
+    padding:20px;
 }
