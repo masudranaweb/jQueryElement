@@ -190,14 +190,121 @@ $(document).ready(function(){
 })
 
  // ex-23 text Animation
-
- 
  $(document).ready(function(){
    $("#btn_textanimation").on("click", function(){
-      $("#text_animation").animate({
-         color: 'red',
+      $("#text_animation").css({"background-color": "black", "font-size": "50px", "text-align":"center", "color":"white", "left":"250px", "text-style":"bold",
       });
-   })   
-
    });
-  
+   
+   $("#btn_textanimation").on("click", function(){
+      $("#text_animation").animate({
+         height:'toggle',
+      });
+   }) 
+});
+ 
+// EX-24 click the button to stop the slide
+
+$(document).ready(function(){
+   $("#btn_slideUp").on("click", function(){
+      $("#text_slideStop").slideUp(5000);
+   });
+
+   $("#btn_slideStop").on("click", function(){
+      $("#text_slideStop").stop();
+   });
+})
+
+// ex-25 click the button to clling back alert
+$(document).ready(function(){
+   $("#btn_calling").on("click", function(){
+      $("#text_callingback").hide("slow", function(){
+         alert("The paragraph is now hidden");
+      });
+   });
+});
+
+//ex-26 click the button to chaining
+$(document).ready(function(){
+   $("#btn_chaining").on("click", function(){
+      $("#text_chaining").slideUp(3000).slideDown(3000);
+   })
+})
+
+//ex-26 click the button to  get function
+$("document").ready(function(){
+   $("#btn_getText").on("click", function(){
+      alert("text:" + $("#text_get").text());
+   });
+   $("#btn_getHTML").on("click", function(){
+      alert("HTML:" + $("#text_get").html());
+   });
+   $("#btn_gethref").on("click", function(){
+      alert($("#text_href").attr("href"));
+   });
+})
+
+// ex-27 click the button to insert after
+
+$(document).ready(function(){
+   let x= "Welcome! <br> ";
+   let y=" Masud Rana <br> "
+   $("#btn_insertafter").on("click", function(){
+      $("#text_appendText").append(x,y);
+   })
+})
+
+//ex-28 click the button to  remove the text
+
+$(document).ready(function(){
+   var x="#removeText";
+   $("#btn_removeText").on("click", function(){
+      $(x).remove();
+   });
+})
+
+//ex-29 click the button to  remove the text
+
+$(document).ready(function(){
+   $("#btn_css_class").on("click", function(){
+      $("#cssClass").css("color","blue");
+      $("#cssClass").css("font-size","25px");
+   });
+
+   // $("#btn_css_toggle").toggle(
+   //    function(){$("#cssClass").css({"color": "red"});},
+   //    function(){$("#cssClass").css({"color": "blue"});},
+   //    function(){$("#cssClass").css({"color": "green"});
+   //  });
+})
+
+// ex-30 Send an HTTP GET request to a page and get the result back
+$(document).ready(function(){
+   $("#btn_get_post").on("click", function(){
+     $.post("demo_test_post.asp",
+     {
+       name: "Donald Duck",
+       city: "Duckburg"
+     },
+     function(data,status){
+       alert("Data: " + data + "\nStatus: " + status);
+     });
+   });
+ });
+
+//ex-31 click the button to  empty div
+$(document).ready(function(){
+   $("#btn_empty").on("click", function(){
+      $(".empty_box").empty();
+   })
+})
+//ex-32 click the button to  background color show
+$(document).ready(function(){
+   $("#btn_bgShow").on("click", function(){
+      alert("Background Color:    " +   $("#bgShow").css("background-color"));
+   });
+   $("#bgShow").on("dblclick", function(){
+      alert("Color:    " +   $("#bgShow").css("color"));
+   });
+
+})
