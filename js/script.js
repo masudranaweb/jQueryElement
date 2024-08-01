@@ -308,3 +308,18 @@ $(document).ready(function(){
    });
 
 })
+
+// ex-33Type something in the input field to search the table
+
+
+
+
+$(document).ready(function(){
+   $("#filterInput").on("keyup", function(){
+      x = $(this).val().toLowerCase();
+
+      $("#tableTrCustom tr").filter(function(){
+         $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
+      })
+   })
+})
